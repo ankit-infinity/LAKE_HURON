@@ -20,6 +20,9 @@ Lake Huron is the second-largest of North America's Great Lakes, bordering Michi
 
   The time seris was visualized to identify overall trends and structural pattern .A downward trend was observed with no seasonal component.
   
+  ![alt text](https://github.com/ankit-infinity/LAKE_HURON/blob/main/image/lake%20huron%20water%20level.png)
+
+  
 3.STATIONARY CHECK
 
   The augumented dickey fuller test was applied to assess stationarity .The series was found to be non stationary.
@@ -28,17 +31,31 @@ Lake Huron is the second-largest of North America's Great Lakes, bordering Michi
 
   First order differencing eas applied to remove the trend and acheive stationary.
   
+  ![alt text](https://github.com/ankit-infinity/LAKE_HURON/blob/main/image/differnce%20lake%20huron.png)
+  
 5.MODEL IDENTIFICATION
 
   Autocorrelation(ACF) and Partial autocorrelation(PACF)plots of the differenced series were examinee to identify suitable ARIMA model.
+  
+  ![alt text](https://github.com/ankit-infinity/LAKE_HURON/blob/main/image/acf%2Cpacf.png)
   
 6.MODEL ESTIMATION 
 
   multiple ARIMA models including ARIMA(0,1,0) AND ARIMA(1,1,2),were fitted using R.the auto.arima()function was also used for automated model selection.
   
+  ![alt text](https://github.com/ankit-infinity/LAKE_HURON/blob/main/image/FITTED%20ARIMA(0%2C1%2C0).png)
+  
 7.MODEL EVALUATION
 
   Models were compared using AIC Ljungbox residuals diagnostic and train test forecast error.
+  
+  arima(1,1,2):
+  
+  ![alt text](https://github.com/ankit-infinity/LAKE_HURON/blob/main/image/residuals%20arima(1%2C1%2C2).png)
+  
+  arima(0,1,0):
+  
+  ![alt text](https://github.com/ankit-infinity/LAKE_HURON/blob/main/image/RESIDUALSARIMA(0%2C1%2C0).png)
   
 8.MODEL SELECTION
 
@@ -48,7 +65,11 @@ Lake Huron is the second-largest of North America's Great Lakes, bordering Michi
 
   The selected model was used to generate future forecast of lake huron water levels along with confidence interval.
   
+  ![alt text](https://github.com/ankit-infinity/LAKE_HURON/blob/main/image/FORECAST%20ARIMA(0%2C1%2C0).png)
   
+  ![alt text](https://github.com/ankit-infinity/LAKE_HURON/blob/main/image/FORECAST%20VS%20TEST%20ARIMA.png)
+  
+
 # CONCLUSION
 
 Although ARIma(1,1,2) model acheived a lower AIC and slightly better in sample fit it did ot improve out of sample forecasting performance compared 
